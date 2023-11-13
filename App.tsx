@@ -7,6 +7,8 @@ import Login from './src/screen/Login';
 import SplashScreenComponent from './src/screen/SplashScreen';
 import Matching from "./src/screen/Matching";
 import StartGame from "./src/screen/StartGame";
+import Winner from "./src/screen/Winner";
+
 
 const Stack = createNativeStackNavigator();
 const MyTheme = {
@@ -20,11 +22,12 @@ export default function App() {
   return (
     <NavigationContainer>
       <GluestackUIProvider config={config}>
-        <Stack.Navigator initialRouteName='StartGame' screenOptions={{ headerShown: false }}>
+        <Stack.Navigator initialRouteName='Winner' screenOptions={{ headerShown: false }}>
           <Stack.Screen name="SplashScreen" component={SplashScreenComponent} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Matching" component={Matching} />
           <Stack.Screen name="StartGame" component={StartGame} />
+          <Stack.Screen name="Winner" component={Winner} />
         </Stack.Navigator>
       </GluestackUIProvider>
     </NavigationContainer>

@@ -1,22 +1,22 @@
 import React from 'react';
 import { View, Image, TouchableOpacity, StyleSheet,Text } from 'react-native';
 
-const MyComponent = ({navigation}) => {
+const StartGameComponent = ({navigation}) => {
   return (
     <><View style={styles.container}>
           <View style={styles.topRightIcon}>
-              {/* Place the diamond icon here */}
               <Image
                   source={require('../assets/diamond.png')}
                   style={{ width: 30, height: 30 }} />
               <Text style={{fontSize: 15,paddingTop: 5,fontWeight: 'bold',}}>100</Text>
+              <TouchableOpacity>
               <Image
                   source={require('../assets/plus.png')}
                   style={{ width: 30, height: 30 }} />
+              </TouchableOpacity>
           </View>
       <View style={styles.contener}>
       <View style={styles.centerAvatar}>
-        {/* Place the avatar image here */}
         <Image
           source={require('../assets/avatar.png')}
           style={{ width: 100, height: 100,borderWidth: 10,backgroundColor: '#12486B',borderBottomWidth: 10,borderTopWidth: 10,borderColor: '#12486B', borderRadius: 50,position: 'absolute', top: -60, left: 160, right: 0, bottom: 10, margin: 'auto' }}
@@ -33,7 +33,6 @@ const MyComponent = ({navigation}) => {
         <Text style={{ textAlign: 'center', fontSize: 30,color: 'white' }}>
             Start Game
         </Text>
-        {/* Place the button content here */}
       </TouchableOpacity>
         </View>
       </View>
@@ -86,4 +85,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MyComponent;
+export default StartGameComponent;

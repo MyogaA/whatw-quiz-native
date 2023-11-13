@@ -42,12 +42,11 @@ const Matching = ({ navigation }) => {
         </Text>
         <CountDown
           size={50}
-          until={1000}
+          until={60}
           onFinish={() => alert('Finished')}
           digitStyle={{ backgroundColor: 'transparent' }}
           digitTxtStyle={{ color: '#FFA33C' }}
-          timeLabelStyle={{ color: 'red', fontWeight: 'bold' }}
-          separatorStyle={{ color: '#FFA33C', fontSize: 30, fontWeight: 'bold' }}
+          separatorStyle={{ color: '#FFA33C', fontWeight: 'bold' }}
           timeToShow={['M', 'S']}
           timeLabels={{ m: null, s: null }}
           showSeparator
