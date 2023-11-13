@@ -94,7 +94,7 @@ export default function Profile({ navigation }) {
             borderRadius="$2xl"
             isDisabled={false}
             isFocusVisible={false}
-            onPress={() => navigation.navigate('WaterWave')}>
+            onPress={() => navigation.navigate('StartGame')}>
             <ButtonText>Continue </ButtonText>
           </Button>
         </View>
