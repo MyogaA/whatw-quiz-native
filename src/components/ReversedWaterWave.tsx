@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View } from '@gluestack-ui/themed';
 import { StyleSheet, Animated, Easing } from 'react-native';
 
-export default function WaterWave() {
+export default function ReversedWaterWave() {
   const [rotateValue] = useState(new Animated.Value(0));
 
   useEffect(() => {
@@ -24,13 +24,13 @@ export default function WaterWave() {
   return (
     <View style={styles.container} width={'100%'} height={'100%'}>
       <Animated.View
-        style={[styles.wave1, { transform: [{ rotate: rotateValue.interpolate({ inputRange: [0, 1], outputRange: ['0deg', '360deg'] }) }] }]}
+        style={[styles.wave1, { transform: [{ rotate: rotateValue.interpolate({ inputRange: [0, 1], outputRange: ['0deg', '60deg'] }) }] }]}
       />
       <Animated.View
-        style={[styles.wave2, { transform: [{ rotate: rotateValue.interpolate({ inputRange: [0, 1], outputRange: ['0deg', '360deg'] }) }] }]}
+        style={[styles.wave2, { transform: [{ rotate: rotateValue.interpolate({ inputRange: [0, 1], outputRange: ['0deg', '60deg'] }) }] }]}
       />
       <Animated.View
-        style={[styles.wave3, { transform: [{ rotate: rotateValue.interpolate({ inputRange: [0, 1], outputRange: ['0deg', '360deg'] }) }] }]}
+        style={[styles.wave3, { transform: [{ rotate: rotateValue.interpolate({ inputRange: [0, 1], outputRange: ['0deg', '60deg'] }) }] }]}
       />
     </View>
   );
